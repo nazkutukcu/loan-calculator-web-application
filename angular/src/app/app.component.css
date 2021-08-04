@@ -1,0 +1,30 @@
+
+.mat-card mat-toolbar{
+
+    background-color: #ffb300;
+}
+
+
+
+ button{
+    color:white;
+    background-color: black;
+}
+
+.maindiv mat-card{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+
+.center mat-toolbar{
+    background-color:white;
+    margin-top: 20px;
+    margin-left: 50%;
+}
+
+.mat-card h1{
+    background-color: #ffb300;
+    margin-top: 5px;
+}
+

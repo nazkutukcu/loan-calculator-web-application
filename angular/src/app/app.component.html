@@ -1,0 +1,87 @@
+
+<div  fxLayoutAlign=" center"   class="main-div" col-30>
+    
+    <mat-card fxFlex="40">
+        <mat-toolbar >  Kredi Hesaplama Aracı</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)" >
+          
+            <mat-slider [(ngModel)]="bir"  name="KrediTutari" min="3000" max="125000" > </mat-slider>
+                           
+            <mat-form-field >
+              
+              <input type="number" name="KrediTutari"  [(ngModel)]="bir"  matInput placeholder="Kredi Tutarı" >
+            </mat-form-field>
+          
+            <mat-slider [(ngModel)]="iki"  name="KrediVadesi" min="3" max="36" > </mat-slider>
+            <mat-form-field >
+              
+              <input type="number" name="KrediVadesi" [(ngModel)]="iki" matInput placeholder="Kredi Vadesi">
+            </mat-form-field>
+            <button  mat-raised-button type="submit" >Kredi Hesapla</button>
+           
+          </form>
+
+    
+     
+          <div class="center" >
+            
+           
+            <table class="table">
+                <thead>
+                  <tr >
+                    <th> Vade Id</th>                  
+                    <th>Taksit Tutarı</th>
+                    <th>Ana Para</th>
+                   
+                 </tr>
+                </thead>
+
+                  
+              <tbody >
+                 <tr *ngFor="let vade of vadeler">
+                    <th>{{vade.vadeId }}</th>
+                    <th>{{vade.taksitTutari }}</th>
+                    <th>{{vade.anaPara }}</th>
+                 </tr>
+              </tbody>
+
+            </table>
+        </div>
+
+    </mat-card> 
+       
+
+
+
+  <mat-card fxFlex="40">
+    <h1>Başvuru</h1>
+    <form   #kayitPost="ngForm" (ngSubmit)="onSubmit(kayitPost.value)">
+      <div class="form-group">
+        <label>Ad: </label>
+        <input type="string" name="adi" ngModel >
+      </div>
+      <br>
+      <div class="form-group">
+       <label>Soyad: </label>
+       <input type="string" name="soyadi" ngModel >
+     </div>
+     <br>
+     <div class="form-group">
+       <label>Telefon: </label>
+       <input type="number" name="telefon" ngModel  >
+     </div>
+     <br>
+     <button mat-raised-button type="submit" *ngIf="true">Başvuru Yap</button>
+    </form>  
+  </mat-card>
+
+
+
+</div>
+   
+
+
+
+
+ 
+    
