@@ -124,11 +124,7 @@ namespace Staj.Controllers
             var result = db.GetAllVade();
             return Ok(result);
         }
-        //şimdi size yağtıgımı anlataym
-        //1.ANGULARDAN 5000 VE 5 GİBİ İK DEĞER GELECEK BURAYA.
-        //BURAYA VADE HESAPLA METODUNUZ GİDİP LİSTE LİSTE YAPACAK VE DÖNECEK ODA GELENLİSTE İÇİN DOLU VAR SATIRLAR OLUŞMUŞ.
-        //DAHA SONRA HesaplananVadeEkle BU METOD LİSTE İSTIYOR YA GELEN LİSTEYİ VERİYORUZ ICINE
-        //GORDUN MU SONRADA TEK TEK LISTEYI SQL E EKLEYECEK OLAY BU
+       
        
 
       
